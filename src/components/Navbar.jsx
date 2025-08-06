@@ -60,7 +60,8 @@ const Navbar = () => {
           </button>
         ))}
       </div>
-      <button className="ml-auto bg-[#2451A0] text-white text-[16px] px-6 py-2 rounded-full font-medium hover:bg-[#1a3e80] transition cursor-pointer">
+      {/* ml-auto bg-[#2451A0] text-white text-[16px] px-6 py-2 rounded-full font-medium hover:bg-[#1a3e80] transition cursor-pointer */}
+      <button className={`transition ml-auto text-white border cursor-pointer p-2 rounded-2xl ${atTop ? 'bg-white/[.22] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5px]  border-white/30' : 'bg-[#2451A0]'} `}>
         On se capte ?
       </button>
     </nav>
