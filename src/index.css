@@ -6,6 +6,11 @@
   }
 }
 
+@theme {
+  --color-bg1: rgb(0, 17, 82);
+  --color-bg2: rgb(108, 0, 162);
+}
+
 .animated-gradient-text {
   background: linear-gradient(90deg, #000851, #1cb5e0, #000851, #000851);
   background-size: 200% 200%;
@@ -16,3 +21,17 @@
   animation: gradient-move 8s linear infinite;
   animation-timing-function: linear;
 }
+
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+  .hover-zoom {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-zoom:hover {
+    transform: scale(1.05);
+  }

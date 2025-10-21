@@ -21,22 +21,20 @@ const Navbar = () => {
   }, []);
 
   return (
-    // "fixed top-0 left-0 w-full z-50 flex items-center bg-white px-8 py-4 font-montserrat shadow-md"
-
     <nav
-      className={`fixed top-0 left-0 w-full z-50 flex items-center px-8 py-4 font-montserrat transition
-        ${atTop ? "" : " bg-white shadow-md"}`}
+      className={`fixed top-4 left-4 right-4 z-50 flex items-center px-8 py-4 font-montserrat
+        ${atTop ? "" : "glass-morphism rounded-full px-8 py-3 shadow-md"}`}
     >
       <div
         className={`text-[28px] font-bold text flex items-center transition ${
-          atTop ? "text-white" : "animated-gradient-text"
+          atTop ? "text-white" : "text-white"
         } `}
       >
         HNF.
       </div>
       <div
         className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-10 font-medium ${
-          atTop ? "text-white" : "text-neutral-900"
+          atTop ? "text-white" : "text-white"
         }`}
       >
         {options.map((option) => (
@@ -52,7 +50,7 @@ const Navbar = () => {
             {selected !== option.value && (
               <span
                 className={`block mx-auto mt-2 w-[60%] h-0.5 rounded ${
-                  atTop ? "bg-white" : "bg-neutral-900"
+                  atTop ? "bg-white" : "bg-white"
                 }`}
                 aria-hidden="true"
               />
@@ -61,8 +59,10 @@ const Navbar = () => {
         ))}
       </div>
       {/* ml-auto bg-[#2451A0] text-white text-[16px] px-6 py-2 rounded-full font-medium hover:bg-[#1a3e80] transition cursor-pointer */}
-      <button className={`transition ml-auto text-white border cursor-pointer p-2 rounded-2xl ${atTop ? 'bg-white/[.22] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5px]  border-white/30' : 'bg-[#2451A0]'} `}>
-        On se capte ?
+      <button
+        className={`transition ml-auto text-white border cursor-pointer py-2 px-6 rounded-full bg-white/[.22] glass-morphism hover-zoom`}
+      >
+        Contact
       </button>
     </nav>
   );
